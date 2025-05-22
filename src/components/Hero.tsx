@@ -104,7 +104,7 @@ const Hero = () => {
               className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10"
               asChild
             >
-              <Link to="/projects">View My Work</Link>
+              <Link to="/projects">My Work</Link>
             </Button>
           </motion.div>
         </motion.div>
