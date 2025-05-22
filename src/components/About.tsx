@@ -36,7 +36,7 @@ const About = () => {
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 shadow-xl">
               <div className="flex flex-col items-center">
                 <img
-                  src="../../public/profile3.jpg"
+                  src="profile3.jpg"
                   alt="Profile"
                   className="w-40 h-40 object-cover rounded-full border-4 border-white/30 shadow-lg mb-4"
                 />
