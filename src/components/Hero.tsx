@@ -148,7 +148,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 400 }}
             >
               <motion.img
-                src="../../public/1.jpeg"
+                src="1.jpeg"
                 alt="Professional portrait"
                 className="w-full h-auto rounded"
                 whileHover={{ scale: 1.02 }}
