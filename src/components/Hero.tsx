@@ -80,7 +80,7 @@ const Hero = () => {
           </motion.h2>
           
           <motion.p 
-            className="text-white mb-8 max-w-lg"
+            className="text-white mb-8 max-w-lg text-xm"
             variants={itemVariants}
           >
             I’m KHAIRI ABDELGHANI, a junior full-stack developer and software development student at 1337 Coding School – part of the UM6P 42 Network in Khouribga, Morocco. I specialize in designing and developing scalable, efficient, and user-focused applications. With a solid grasp of modern development tools and frameworks, I enjoy tackling complex challenges and writing clean, maintainable code that delivers real value.
@@ -116,7 +116,7 @@ const Hero = () => {
             className="relative"
             style={{ rotateX, y: y1 }}
           >
-            <motion.div 
+            {/* <motion.div 
               className="absolute -top-6 -left-6 w-64 h-64 bg-portfolio-secondary/20 rounded-lg"
               style={{ y: y2 }}
               animate={{
@@ -140,10 +140,21 @@ const Hero = () => {
                   ease: "linear"
                 }
               }}
-            />
-            
+            /> */}
             <motion.div 
-              className="relative z-10 bg-white p-4 rounded-lg shadow-xl"
+              className="relative z-10 bg-white p-4 rounded-lg shadow-xl w-80 h-120" // Fixed container size
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
+              <motion.img
+                src="1.jpeg"
+                alt="Professional portrait"
+                className="w-full h-full object-cover rounded" // Fills container while maintaining aspect ratio
+                whileHover={{ scale: 1.02 }}
+              />
+            </motion.div>
+            {/* <motion.div 
+              className="relative z-10 bg-white p-4 rounded-lg shadow-xl w-70 h-70"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
@@ -153,7 +164,7 @@ const Hero = () => {
                 className="w-full h-auto rounded"
                 whileHover={{ scale: 1.02 }}
               />
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </motion.div>
       </div>
