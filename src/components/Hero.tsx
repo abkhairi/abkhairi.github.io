@@ -95,16 +95,16 @@ const Hero = () => {
               className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white px-6"
               asChild
             >
-              <a href="/contact">
+              <Link to="/contact">
                 Contact Me <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
             </Button>
             <Button
               variant="outline"
               className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10"
               asChild
             >
-              <Link to="/projects">My Work</Link>
+              <Link to="/projects">View My Work</Link>
             </Button>
           </motion.div>
         </motion.div>
