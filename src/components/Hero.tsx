@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 import { useTransform, useViewportScroll } from "framer-motion";
 
 const Hero = () => {
@@ -103,7 +104,7 @@ const Hero = () => {
               className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10"
               asChild
             >
-              <a href="/projects">View My Work</a>
+              <Link to="/projects">View My Work</Link>
             </Button>
           </motion.div>
         </motion.div>
