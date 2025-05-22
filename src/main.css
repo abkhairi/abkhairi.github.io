@@ -1,0 +1,9 @@
+/* Dans votre fichier main.css */
+html {
+    scroll-padding-top: 6rem; /* Empêche le contenu d'être caché sous la navbar fixe */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
