@@ -72,6 +72,19 @@ const Hero = () => {
           </motion.div>
           
           <motion.h1 
+            className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-portfolio-primary"
+            variants={itemVariants}
+          >
+            ABDELGHANI KHAIRI
+          </motion.h1>
+
+          <motion.h2 
+            className="text-xl sm:text-2xl md:text-3xl font-medium text-portfolio-secondary mb-6"
+            variants={itemVariants}
+          >
+            Software developer
+          </motion.h2>
+          {/* <motion.h1 
             className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-portfolio-primary"
             variants={itemVariants}
           >
@@ -83,7 +96,7 @@ const Hero = () => {
             variants={itemVariants}
           >
             Software developer
-          </motion.h2>
+          </motion.h2> */}
           
           <motion.p 
             className="text-white mb-8 max-w-lg text-sm sm:text-base"
