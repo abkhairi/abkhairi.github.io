@@ -55,19 +55,6 @@ const Navbar = () => {
     </text>
   </svg>
 </NavLink>
-
-        {/* <NavLink 
-          to="/" 
-          className="text-portfolio-primary text-xl font-bold hover:text-portfolio-secondary transition-colors"
-        >
-            <img 
-              src="../../public/logo_abkhairi.svg" 
-              alt="Abkhairi Logo" 
-              className="h-8 w-12" // Adjust size as needed
-            />
-        </NavLink> */}
-
-        {/* Menu Desktop */}
         <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             <NavLink

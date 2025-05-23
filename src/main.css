@@ -1,9 +1,23 @@
-/* Dans votre fichier main.css */
+/* Dans votre fichier main.css
 html {
-    scroll-padding-top: 6rem; /* Empêche le contenu d'être caché sous la navbar fixe */
+    scroll-padding-top: 6rem;
   }
   
   body {
     margin: 0;
     padding: 0;
+  } */
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Better touch targets */
+  button, a {
+    min-width: 44px;
+    min-height: 44px;
   }
