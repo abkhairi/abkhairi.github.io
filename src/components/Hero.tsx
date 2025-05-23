@@ -88,8 +88,9 @@ const Hero = () => {
             className="text-white mb-8 max-w-lg text-sm sm:text-base"
             variants={itemVariants}
           >
-            I'm KHAIRI ABDELGHANI, a junior full-stack developer and software development student at 1337 Coding School – part of the UM6P 42 Network in Khouribga, Morocco. I specialize in designing and developing scalable, efficient, and user-focused applications.
-          </motion.p>
+I’m KHAIRI ABDELGHANI, a junior full-stack developer and software development student at 1337 Coding School – part of the UM6P 42 Network in Khouribga, Morocco. I specialize in designing and developing scalable, efficient, and user-focused applications. With a solid grasp of modern development tools and frameworks, I enjoy tackling complex challenges and writing clean, maintainable code that delivers real value.
+
+</motion.p>
           
           <motion.div 
             className="flex flex-wrap gap-4"
