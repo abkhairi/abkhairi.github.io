@@ -1,20 +1,162 @@
+// import React from "react";
+// import { Button } from "@/components/ui/button";
+// import { ArrowRight } from "lucide-react";
+// import { motion } from "framer-motion";
+// import { Link } from 'react-router-dom';
+// import { useTransform, useViewportScroll } from "framer-motion";
+// import { useMediaQuery } from "react-responsive";
+// import profileImage from '/1.jpeg';
+
+// const Hero = () => {
+//   const { scrollY } = useViewportScroll();
+//   const y1 = useTransform(scrollY, [0, 300], [0, 100]);
+//   const y2 = useTransform(scrollY, [0, 300], [0, -100]);
+//   const rotateX = useTransform(scrollY, [0, 300], [0, 10]);
+  
+//   // Check if device is mobile
+//   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
+//   const containerVariants = {
+//     hidden: { opacity: 0 },
+//     visible: {
+//       opacity: 1,
+//       transition: {
+//         staggerChildren: 0.2,
+//         delayChildren: 0.3
+//       }
+//     }
+//   };
+
+//   const itemVariants = {
+//     hidden: { y: 20, opacity: 0 },
+//     visible: {
+//       y: 0,
+//       opacity: 1,
+//       transition: {
+//         duration: 0.5,
+//         ease: "easeOut"
+//       }
+//     }
+//   };
+
+//   const imageVariants = {
+//     hidden: { scale: 0.8, opacity: 0 },
+//     visible: {
+//       scale: 1,
+//       opacity: 1,
+//       transition: {
+//         delay: 0.5,
+//         duration: 0.8,
+//         type: "spring",
+//         stiffness: 100
+//       }
+//     }
+//   };
+
+//   return (
+//     <motion.section
+//       id="home"
+//       className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-gray-500 via-gray-900 to-black"
+//       initial="hidden"
+//       animate="visible"
+//       variants={containerVariants}
+//     >
+//       <div className="section-padding grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 sm:px-6">
+//         <motion.div variants={itemVariants} className="order-2 lg:order-1">
+//           <motion.div 
+//             className="flex items-center space-x-2 mb-4"
+//             variants={itemVariants}
+//           >
+//             <div className="h-1 w-12 bg-portfolio-accent"></div>
+//             <p className="text-portfolio-secondary font-medium">Hello, I'm</p>
+//           </motion.div>
+          
+//           <motion.h1 
+//             className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-portfolio-primary"
+//             variants={itemVariants}
+//           >
+//             ABDELGHANI KHAIRI
+//           </motion.h1>
+
+//           <motion.h2 
+//             className="text-xl sm:text-2xl md:text-3xl font-medium text-portfolio-secondary mb-6"
+//             variants={itemVariants}
+//           >
+//             Software developer
+//           </motion.h2>
+  
+//           <motion.p 
+//             className="text-white mb-8 max-w-lg text-sm sm:text-base"
+//             variants={itemVariants}
+//           >
+//       I’m KHAIRI ABDELGHANI, a junior full-stack developer and software development student at 1337 Coding School – part of the UM6P 42 Network in Khouribga, Morocco. I specialize in designing and developing scalable, efficient, and user-focused applications. With a solid grasp of modern development tools and frameworks, I enjoy tackling complex challenges and writing clean, maintainable code that delivers real value.
+//         </motion.p>
+          
+//           <motion.div 
+//             className="flex flex-wrap gap-4"
+//             variants={itemVariants}
+//           >
+//             <Button 
+//               className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white px-4 sm:px-6 py-3"
+//               asChild
+//             >
+//               <Link to="/contact">
+//                 Contact Me <ArrowRight className="ml-2 h-4 w-4" />
+//               </Link>
+//             </Button>
+//             <Button
+//               variant="outline"
+//               className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10 px-4 sm:px-6 py-3"
+//               asChild
+//             >
+//               <Link to="/projects">View My Work</Link>
+//             </Button>
+//           </motion.div>
+//         </motion.div>
+
+//         {!isMobile && (
+//           <motion.div 
+//             className="hidden lg:block order-1 lg:order-2"
+//             variants={imageVariants}
+//           >
+//             <motion.div 
+//               className="relative"
+//               style={{ rotateX, y: y1 }}
+//             >
+//               <motion.div 
+//                 className="relative z-10 bg-white p-4 rounded-lg shadow-xl w-90 h-120"
+//                 whileHover={{ scale: 1.05 }}
+//                 transition={{ type: "spring", stiffness: 400 }}
+//               >
+//                 <motion.img
+  
+//                   src={profileImage}
+//                   alt="Professional portrait"
+//                   className="w-full h-full object-cover rounded"
+//                   whileHover={{ scale: 1.02 }}
+//                 />
+//               </motion.div>
+//             </motion.div>
+//           </motion.div>
+//         )}
+//       </div>
+//     </motion.section>
+//   );
+// };
+// export default Hero;
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { useTransform, useViewportScroll } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
 import profileImage from '/1.jpeg';
 
 const Hero = () => {
   const { scrollY } = useViewportScroll();
   const y1 = useTransform(scrollY, [0, 300], [0, 100]);
-  const y2 = useTransform(scrollY, [0, 300], [0, -100]);
   const rotateX = useTransform(scrollY, [0, 300], [0, 10]);
-  
-  // Check if device is mobile
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -61,75 +203,67 @@ const Hero = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="section-padding grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 sm:px-6">
-        <motion.div variants={itemVariants} className="order-2 lg:order-1">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
           <motion.div 
-            className="flex items-center space-x-2 mb-4"
+            className="order-2 lg:order-1"
             variants={itemVariants}
           >
-            <div className="h-1 w-12 bg-portfolio-accent"></div>
-            <p className="text-portfolio-secondary font-medium">Hello, I'm</p>
-          </motion.div>
-          
-          <motion.h1 
-            className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-portfolio-primary"
-            variants={itemVariants}
-          >
-            ABDELGHANI KHAIRI
-          </motion.h1>
-
-          <motion.h2 
-            className="text-xl sm:text-2xl md:text-3xl font-medium text-portfolio-secondary mb-6"
-            variants={itemVariants}
-          >
-            Software developer
-          </motion.h2>
-          {/* <motion.h1 
-            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-portfolio-primary"
-            variants={itemVariants}
-          >
-            ABDELGHANI KHAIRI
-          </motion.h1>
-          
-          <motion.h2 
-            className="text-xl sm:text-2xl md:text-3xl font-medium text-portfolio-secondary mb-6"
-            variants={itemVariants}
-          >
-            Software developer
-          </motion.h2> */}
-          
-          <motion.p 
-            className="text-white mb-8 max-w-lg text-sm sm:text-base"
-            variants={itemVariants}
-          >
-      I’m KHAIRI ABDELGHANI, a junior full-stack developer and software development student at 1337 Coding School – part of the UM6P 42 Network in Khouribga, Morocco. I specialize in designing and developing scalable, efficient, and user-focused applications. With a solid grasp of modern development tools and frameworks, I enjoy tackling complex challenges and writing clean, maintainable code that delivers real value.
-        </motion.p>
-          
-          <motion.div 
-            className="flex flex-wrap gap-4"
-            variants={itemVariants}
-          >
-            <Button 
-              className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white px-4 sm:px-6 py-3"
-              asChild
+            <motion.div 
+              className="flex items-center space-x-2 mb-4"
+              variants={itemVariants}
             >
-              <Link to="/contact">
-                Contact Me <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button
-              variant="outline"
-              className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10 px-4 sm:px-6 py-3"
-              asChild
+              <div className="h-1 w-12 bg-portfolio-accent"></div>
+              <p className="text-portfolio-secondary font-medium">Hello, I'm</p>
+            </motion.div>
+            
+            <motion.h1 
+              className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-portfolio-primary"
+              variants={itemVariants}
             >
-              <Link to="/projects">View My Work</Link>
-            </Button>
-          </motion.div>
-        </motion.div>
+              ABDELGHANI KHAIRI
+            </motion.h1>
 
-        {!isMobile && (
+            <motion.h2 
+              className="text-xl sm:text-2xl md:text-3xl font-medium text-portfolio-secondary mb-6"
+              variants={itemVariants}
+            >
+              Software developer
+            </motion.h2>
+            
+            <motion.p 
+              className="text-white mb-8 max-w-lg text-base sm:text-lg"
+              variants={itemVariants}
+            >
+              I'm KHAIRI ABDELGHANI, a junior full-stack developer and software development student at 1337 Coding School – part of the UM6P 42 Network in Khouribga, Morocco. I specialize in designing and developing scalable, efficient, and user-focused applications.
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-wrap gap-4"
+              variants={itemVariants}
+            >
+              <Button 
+                className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white px-6 py-3 text-sm sm:text-base"
+                asChild
+              >
+                <Link to="/contact">
+                  Contact Me <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button
+                variant="outline"
+                className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10 px-6 py-3 text-sm sm:text-base"
+                asChild
+              >
+                <Link to="/projects">View My Work</Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Image Content - Now visible on mobile but with different styling */}
           <motion.div 
-            className="hidden lg:block order-1 lg:order-2"
+            className="order-1 lg:order-2 flex justify-center"
             variants={imageVariants}
           >
             <motion.div 
@@ -137,25 +271,26 @@ const Hero = () => {
               style={{ rotateX, y: y1 }}
             >
               <motion.div 
-                className="relative z-10 bg-white p-4 rounded-lg shadow-xl w-90 h-120"
+                className="relative z-10 bg-white p-2 sm:p-4 rounded-lg shadow-xl w-full max-w-xs lg:w-90 lg:h-120"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
                 <motion.img
-  
                   src={profileImage}
                   alt="Professional portrait"
                   className="w-full h-full object-cover rounded"
                   whileHover={{ scale: 1.02 }}
+                  loading="lazy"
                 />
               </motion.div>
             </motion.div>
           </motion.div>
-        )}
+        </div>
       </div>
     </motion.section>
   );
 };
+
 export default Hero;
 // import React from "react";
 // import { Button } from "@/components/ui/button";
