@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { useTransform, useViewportScroll } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import profileImage from '/1.jpeg';
 
 const Hero = () => {
   const { scrollY } = useViewportScroll();
@@ -128,7 +129,8 @@ const Hero = () => {
                 transition={{ type: "spring", stiffness: 400 }}
               >
                 <motion.img
-                  src="1.jpeg"
+  
+                  src={profileImage}
                   alt="Professional portrait"
                   className="w-full h-full object-cover rounded"
                   whileHover={{ scale: 1.02 }}
