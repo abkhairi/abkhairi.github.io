@@ -147,7 +147,7 @@ const About = () => {
                   </div>
                   <div>
                     <h5 className="font-medium text-white">technicien spécialisé en développement informatique</h5>
-                    <p className="text-sm text-white/70">ISIG | 2020 - 2022</p>
+                    <p className="text-sm text-white/70">2020 - 2022</p>
                   </div>
                 </div>
                 
