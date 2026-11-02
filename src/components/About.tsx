@@ -97,7 +97,7 @@ const About = () => {
                   </li>
                   <li className="flex">
                     <span className="font-medium w-28 text-white/80">Location:</span>
-                    <span className="text-white">Khouribga, Maroc</span>
+                    <span className="text-white">Tanger, Maroc</span>
                   </li>
                 </ul>
               </div>
